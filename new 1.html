@@ -1,0 +1,40 @@
+<html>
+<div style="width:100%; -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);">
+    <img id="img_ID" src="3d front .png" usemap="#map" border="0" width="100%" alt="" />
+</div>
+<map id="map_ID" name="map" onclick="fill1()">
+
+    <area target="" state="hand" title="hand" href="#" coords="51,259,56,264,54,274,52,293,40,291,33,298,32,306,25,301,19,309,11,310,12,301,21,287" shape="poly"/>
+    <area target="" state="Left Hand" title="Left Hand" href="#" coords="406,226,408,221,414,219,420,219,422,213,422,206,422,198,428,199,434,201,439,204,444,209,450,213,454,217,459,222,464,226,470,231,475,235,480,240,485,243,490,247,494,251,500,253,504,257,508,261,500,262,495,266,488,265,482,260,475,257,468,254,462,251,454,250,448,248,441,247,434,244,427,241,421,237,415,233,410,230" shape="poly">
+    <area target="" state="left arm" title="left arm" href="#" coords="421,197,421,204,421,211,420,217,412,218,406,222,396,221,389,218,400,224,383,215,376,212,370,208,364,205,358,199,353,193,353,186,356,180,360,175,366,173,372,170,378,168,384,165,387,169,391,174,396,177,400,181,404,185,409,189,414,193" shape="poly"/>
+    <area target="" state="Right Tibia" title="Right Tibia" href="#" coords="200,641,205,637,211,635,216,637,219,642,223,635,224,627,223,619,223,611,224,603,225,595,226,587,227,579,229,571,232,565,235,559,238,551,238,543,238,535,237,526,229,526,223,527,215,527,208,523,199,512,201,518,196,522,195,530,195,543,195,553,197,563,198,573,200,586,200,597,201,609,201,621,200,630" shape="poly">
+
+</map>
+<script src="test.js"> </script>
+<script src="jquery1.9.2.js"></script>
+<script src="imagmapsterplugin.js"></script>
+<script>
+var basic_opts = {
+    mapKey: 'state'
+};
+
+var initial_opts = $.extend({},basic_opts,
+    {
+        staticState: true,
+        fill: false,
+        stroke: true,
+        strokeWidth: 2,
+        strokeColor: 'ff0000'
+    });
+
+$('img').mapster(initial_opts)
+    .mapster('set',true,'CA', {
+        fill: true,
+        fillColor: '00ff00'
+    })
+    .mapster('snapshot')
+    .mapster('rebind',basic_opts);
+
+</script>
+
+</html>
